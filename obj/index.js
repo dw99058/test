@@ -84,15 +84,14 @@ var result = add(1, 2);
 console.log(result);
 */
 
-var user = {
+var user1 = {
     name : 'jack',
     level : 'gold'
 }
 
-function calNewPrice(price,user1){
-    var newPrice = 0;
+function calNewPrice(price,user){
 
-    switch(user1.level){
+    switch(user.level){
         case 'gold':
             // user.level gold 새 가격은 기존가격의 0.9
             newPrice = price * 0.9;
@@ -113,7 +112,7 @@ function calNewPrice(price,user1){
     return newPrice;
 }
 
-var newPrice = calNewPrice(3000,user);
+var newPrice = calNewPrice(3000,user1);
 console.log(newPrice);
 
 
