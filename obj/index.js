@@ -195,7 +195,7 @@ var user4 = {
 */
 
 
-
+/*
 function User(_name, _age, _address, _level){
     this.name = _name;
     this.age = _age;
@@ -212,3 +212,150 @@ console.log(usera);
 console.log(userb);
 console.log(userc);
 console.log(userd);
+*/
+
+
+/*
+function Person(){
+
+}
+
+Person.prototype.name = 'default name';
+Person.prototype.age = 20;
+
+var jack = new Person();
+
+console.log(jack);
+console.log(jack.name);
+*/
+
+
+
+
+
+
+
+
+// 호이스팅
+/*
+function func(){
+    // var b;
+    console.log(b);
+
+    var b = 70;
+    // b = 70;
+
+}
+
+func();
+*/
+
+
+
+
+
+
+// 콜백 함수
+/*
+function delay(){
+    setTimeout(function(){
+        console.log('3초 지연됨')
+    },3000);
+}
+
+function print(content){
+    console.log(content)
+}
+
+print('a')
+delay();
+print('b');
+*/
+/*
+function test(callback){
+    console.log('a')
+    console.log('b')
+    console.log('c')
+    callback();
+}
+
+function cb(){
+    console.log('호출 됨');
+}
+
+test(cb);
+*/
+
+
+
+
+
+
+
+
+// 배열
+/*
+var user = {
+    name : 'jack',
+    age : 20,
+    address : 'secert'
+}
+
+var user2 = {
+    name : 'joi',
+    age : 25,
+    address : 'secert'
+}
+
+var user3 = {
+    name : 'joi',
+    age : 30,
+    address : 'secert'
+}
+
+
+var arr = [user, user2, user3];
+
+for(var i = 0; i < 3; i++){
+    if(arr[i].age === 20){
+        console.log(arr[i])
+    }
+}
+
+
+var numbers = [1, 2, 3, 4, 5, 6, 7];
+
+console.log(numbers[0]);
+
+numbers.push(100);
+console.log(numbers);
+
+numbers.reverse();
+console.log(numbers);
+
+numbers.push(60);
+console.log(numbers);
+
+numbers.sort();
+console.log(numbers);
+*/
+
+
+
+//             0  1  2  3  4  5  6
+var numbers = [1, 2, 3, 4, 5, 6, 7];
+
+// var value = numbers[index]
+// index 는 0부터 시작
+
+console.log(numbers.length);
+// numbers 배열에 어떤 값이 있는지는 모르고 개수가 7개인것만 아는 상태
+// numbers 안의 값 중에 3이 있으면 "3이 있습니다."
+
+for(var i = 0; i < number.length; i++){
+    //console.log(numbers[i]);
+    if(numbers[i] === 3){
+        console.log("3이 있습니다.")
+    }
+}
+
