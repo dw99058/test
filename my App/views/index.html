@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        #menu{
+            background: darksalmon;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Hello World</h1>
+    <button id="menu_bt">Menu button</button>
+    <div id="menu">
+        <h1>Menu content1</h1>
+        <h1>Menu content2</h1>
+        <h1>Menu content3</h1>
+    </div>
+
+    <script>
+        var isMenuOpen = false;
+
+        document.getElementById('menu_bt').onclick=function(){
+            if(isMenuOpen){
+                //열려있다. 닫아야됨
+                document.getElementById('menu').style.display = 'none';
+                isMenuOpen = false;
+            }else{
+                //닫혀있다. 열어야됨
+                document.getElementById('menu').style.display = 'block';
+                isMenuOpen = true;
+            }
+        }
+
+        var isLogined = false;
+
+        window.onload = function(){
+            if(isLogined){
+                document.getElementById('profile').innerHTML='로그인 됨'
+            }else{
+                document.getElementById('profile').innerHTML='로그인 안됨'
+            }
+        }
+
+        var bt = document.getElementById('a');
+        bt.onclick = function(){
+            alert('Yes!!!!')
+        }
+    </script>
+</body>
+</html>
