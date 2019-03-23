@@ -118,3 +118,97 @@ console.log(newPrice);
 
 
 
+
+
+
+// 자바스크립트에서 함수는 일급 객체이다.
+
+// 함수를 변수에 저장할 수 있고
+// 익명 함수를 사용할 수 있다.
+// 리턴 값으로 사용할 수 있다.
+// var add = function(a,b){
+//     return a+b;
+// }
+// var add = function(){
+//     return function(a,b){
+//         return a+b;
+//     };
+// }
+
+// var func = add();
+// console.log(func(1,2));
+
+
+
+
+
+
+
+
+
+
+// 재귀 함수
+
+// 함수 안에서 본인을 다시 호출하는거
+
+function factorial(num){
+    if(num===0){
+        return 1;
+    }
+
+    return num*factorial(num-1);
+}
+
+// factorial(5) == 5 * factorial(4) == 5*4*factorial(3) == 5*4*3*factorial(2) == 5*4*3*2*factorial(1) == 5*4*3*2*1
+
+// 5! => 5*4*3*2*1
+
+
+
+
+// level 추가하려면 일일이 따로 다 적어야한다.
+/*
+var user1 = {
+    name : 'jack',
+    age : 20,
+    address : 'secret',
+    level : 0
+}
+var user2 = {
+    name : 'joi',
+    age : 30,
+    address : 'top secret',
+    level : 0
+}
+var user3 = {
+    name : 'jason',
+    age : 33,
+    address : 'top secret2',
+    level : 0
+}
+var user4 = {
+    name : 'mia',
+    age : 24,
+    address : 'top secret3',
+    level : 0
+}
+*/
+
+
+
+function User(_name, _age, _address, _level){
+    this.name = _name;
+    this.age = _age;
+    this.address = _address;
+    this.level = _level;
+}
+
+var usera = new User('jack', 20, 'secret', 0);
+var userb = new User('joi', 30, 'top secret1', 0);
+var userc = new User('jason', 33, 'top secret2', 0);
+var userd = new User('mia', 24, 'top secret3', 0);
+
+console.log(usera);
+console.log(userb);
+console.log(userc);
+console.log(userd);
