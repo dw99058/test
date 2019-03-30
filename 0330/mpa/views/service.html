@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            background-color: crimson;
+            position: relative;
+            height: 80px;
+        }
+        header>.logo{
+            position: absolute;
+            left: 16px;
+            top: 0;
+            line-height: 80px;
+        }
+        header > nav{
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        header > nav > ul{
+            display: flex;
+            list-style: none;
+            margin: 0;
+        }
+        header>nav>ul>li{
+            line-height: 80px;
+            padding: 0 16px;
+        }
+        header>nav>ul>li>a{
+            color: #000;
+        }
+    </style>
+
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="logo">Logo</div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/service">Service</a></li>
+                <li><a href="/product">Product</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h1>Service</h1>
+    </section>
+</body>
+</html>
