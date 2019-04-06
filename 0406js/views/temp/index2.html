@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM 탐색</h1>
+    <div id="news">
+        <div id="articles">
+            <div id="article-1">article 1</div>
+            <div id="article-2">article 2</div>
+            <div id="article-3">article 3</div>
+            <div id="article-4">article 4</div>
+        </div>
+    </div>
+
+    <script>
+
+        var article = document.getElementById('articles');
+        console.log(articles);
+
+        // parentNode
+        console.log('부모')
+        console.log(article.parentNode);
+
+        // firstChild, lastChild
+        console.log('첫번째 자식')
+        console.log(articles.firstChild)
+        console.log('마지막 자식')
+        console.log(articles.lastChild)
+
+        // hasChildNodes()
+        console.log('자식을 가지고 있는지')
+        console.log(articles.hasChildNodes())
+
+        // childNodes
+        console.log('childNodes')
+        console.log(articles.childNodes)
+
+        // children
+        console.log('children')
+        console.log(articles.children)
+
+        // previousSibling, nextSibling
+        
+        var element2 = document.getElementById('article-2')
+
+        console.log(element2.previousSibling);
+        console.log(element2.nextSibling);
+
+    </script>
+</body>
+</html>

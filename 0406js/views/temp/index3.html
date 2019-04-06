@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="test" class="c-calss">
+        Jack
+    </div>
+
+    <script>
+        var el = document.getElementById('test');
+
+        console.log(el.nodeName);
+        console.log(el.nodeType);
+
+        console.log(el.id);
+
+        console.log(el.getAttribute('class'))
+
+        console.log(el.removeAttribute('class'))
+
+        el.textContent = 'Test'
+        //innerText 비표준
+
+        el.innerHTML = '<div>this is inner div </div>' // 해킹에 취약하다..
+
+        // createElement()
+        // createTextNode()
+        // appendChild()
+        // removeChild()
+
+    </script>
+</body>
+</html>

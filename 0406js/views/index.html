@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Test</h1>
+    <div>
+
+        <input id="input">
+        <button id="add">추가</button>
+    </div>
+    <div>
+        <h2>내용</h2>
+        <div id="contnet">
+
+        </div>
+    </div>
+
+
+    <script>
+        var content = document.getElementById('content');
+
+        var list = [{content: 'first content'},{content: 'second content'}];
+
+        function render(){
+            var items = '';
+            for(var i=0; i<list.length; i++){
+                var item = '<div>'+list[i].content+'</div>'
+                items = items + item;
+            }
+
+            // items = <div>first content</div><div>second content</div>
+            content.innerHTML = items;
+        }
+        
+        render();
+
+        var bt = document.getElementById('add');
+        bt.onclick = function(){
+            var input = document.getElementById('input');
+            list.push({
+                content:input.value
+            });
+            render();
+        }
+
+    </script>
+</body>
+</html>
